@@ -20,6 +20,7 @@ namespace LICENSE_GEN
 
             comboBox1.Items.Add("쿠팡");
             comboBox1.Items.Add("네이버");
+            comboBox1.Items.Add("인플루언서");
             comboBox1.SelectedIndex = 0;
             
         }
@@ -59,8 +60,10 @@ namespace LICENSE_GEN
             {
                 sb.Append("CPM^");
             }
-            else {
+            else if(comboBox1.SelectedIndex == 1){
                 sb.Append("NVM^");
+            }else {
+                sb.Append("INF^");
             }
             sb.Append(textBox2.Text.Replace("-", ""));
             sb.Append("^");
