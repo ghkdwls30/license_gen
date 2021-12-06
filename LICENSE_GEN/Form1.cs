@@ -18,11 +18,6 @@ namespace LICENSE_GEN
         {
             InitializeComponent();
 
-            comboBox1.Items.Add("쿠팡");
-            comboBox1.Items.Add("네이버");
-            comboBox1.Items.Add("인플루언서");
-            comboBox1.Items.Add("다음");
-            comboBox1.SelectedIndex = 0;
             
         }
 
@@ -57,21 +52,9 @@ namespace LICENSE_GEN
         private void button1_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
-            if (comboBox1.SelectedIndex == 0)
-            {
-                sb.Append("CPM^");
-            }
-            else if (comboBox1.SelectedIndex == 1)
-            {
-                sb.Append("NVM^");
-            }
-            else if (comboBox1.SelectedIndex == 2)
-            {
-                sb.Append("INF^");
-            }
-            else {
-                sb.Append("DAC^");
-            }
+
+            sb.Append(textBox3.Text);
+            sb.Append("^");
             sb.Append(textBox2.Text.Replace("-", ""));
             sb.Append("^");
             sb.Append(dateTimePicker1.Value.ToString("yyyyMMdd") + "235959");
